@@ -61,9 +61,15 @@
     "target" : "OAcHTeEkfp33PU3aNaenj$$aR-1y_CI0D9KiUxf8l4eh",
     "targetPort" : "d4_U7jNDAVExTk2D8gkWH$$Ijd5OpnHXd0Eqj1y50Fj8"
   }, {
-    "id" : "s4kV_TD74N9-Zz_gfALbN",
+    "id" : "xTV-Wh503QixGu1_FyHXF$$9i9soI1iewM-ivZRaR1EJ",
     "source" : "OAcHTeEkfp33PU3aNaenj$$aR-1y_CI0D9KiUxf8l4eh",
     "sourcePort" : "wXGQxcj9D5LADtKwQqqwa$$_UFFSBlW3RER8IBwH0dpt",
+    "target" : "xb9LPQYmyj6tiDE1SfTxU$$z5yq47yePQym3bvNbmAt7",
+    "targetPort" : "LMNetOd4SGJBVvXhwVI4s$$c6kFqqDUoD8dJFvq6cjhr"
+  }, {
+    "id" : "KkHLc8MPynRq4gVXs47CG",
+    "source" : "xb9LPQYmyj6tiDE1SfTxU$$z5yq47yePQym3bvNbmAt7",
+    "sourcePort" : "Qr2311X4ho9VQQWiAKw9S$$QYBHMTkkUEUCi2ejMWh_1",
     "target" : "0Xg1LvNrLeVQo_fNI8uZ7$$8nbgCaGuKtvXAuZnrW1mk",
     "targetPort" : "TUqq8PAlDYk3TJPM4fuhX$$LA1hs5YQixLN4y93Oa6yH"
   } ],
@@ -122,13 +128,48 @@
         "datasetId" : "datasets/customers"
       }
     },
+    "xb9LPQYmyj6tiDE1SfTxU$$z5yq47yePQym3bvNbmAt7" : {
+      "id" : "xb9LPQYmyj6tiDE1SfTxU$$z5yq47yePQym3bvNbmAt7",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_1",
+        "slug" : "Filter_1",
+        "x" : 540,
+        "y" : 200,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "LMNetOd4SGJBVvXhwVI4s$$c6kFqqDUoD8dJFvq6cjhr",
+          "slug" : "in0",
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "Qr2311X4ho9VQQWiAKw9S$$QYBHMTkkUEUCi2ejMWh_1",
+          "slug" : "out",
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "true"
+        }
+      }
+    },
     "0Xg1LvNrLeVQo_fNI8uZ7$$8nbgCaGuKtvXAuZnrW1mk" : {
       "id" : "0Xg1LvNrLeVQo_fNI8uZ7$$8nbgCaGuKtvXAuZnrW1mk",
       "component" : "Target",
       "metadata" : {
         "label" : "customer_orders",
         "slug" : "customer_orders",
-        "x" : 560,
+        "x" : 720,
         "y" : 200,
         "phase" : 0,
         "cache" : false,

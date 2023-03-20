@@ -12,7 +12,7 @@ pipelines:
     mode: batch
     language: python
     createdAt: '2023-03-20 09:56:01'
-    modifiedAt: '2023-03-20 10:28:05'
+    modifiedAt: '2023-03-20 10:43:51'
     datasets:
       inputs:
       - datasets/customers
@@ -115,7 +115,7 @@ subgraphs:
     language: python
     mode: batch
     createdAt: '2023-03-20 10:27:09'
-    modifiedAt: '2023-03-20 10:27:09'
+    modifiedAt: '2023-03-20 10:43:40'
 sqlModels: {}
 sqlPipeline: null
 dependencies: []

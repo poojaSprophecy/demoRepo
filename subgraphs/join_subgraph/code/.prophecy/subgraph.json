@@ -14,14 +14,17 @@
   "ports" : {
     "inputs" : [ {
       "id" : "d4_U7jNDAVExTk2D8gkWH",
-      "slug" : "in0"
+      "slug" : "in0",
+      "isStreaming" : false
     }, {
       "id" : "-nANevotZNk40bnqJ3WHD",
-      "slug" : "in1"
+      "slug" : "in1",
+      "isStreaming" : false
     } ],
     "outputs" : [ {
       "id" : "wXGQxcj9D5LADtKwQqqwa",
-      "slug" : "out0"
+      "slug" : "out0",
+      "isStreaming" : false
     } ],
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false

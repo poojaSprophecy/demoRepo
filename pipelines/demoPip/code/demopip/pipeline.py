@@ -10,7 +10,8 @@ def pipeline(spark: SparkSession) -> None:
     df_orders = orders(spark)
     df_customers = customers(spark)
     df_Subgraph_1 = Subgraph_1(spark, df_customers, df_orders)
-    customer_orders(spark, df_Subgraph_1)
+    df_Filter_1 = Filter_1(spark, df_Subgraph_1)
+    customer_orders(spark, df_Filter_1)
 
 def main():
     spark = SparkSession.builder\

@@ -2,8 +2,8 @@ from pyspark.sql import *
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
 from prophecy.libs import typed_lit
-from demopip2.config.ConfigStore import *
-from demopip2.udfs.UDFs import *
+from demopip.config.ConfigStore import *
+from demopip.udfs.UDFs import *
 
 def Join_1_1(spark: SparkSession, in0: DataFrame, in1: DataFrame, ) -> DataFrame:
     return in0\
