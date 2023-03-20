@@ -1,0 +1,123 @@
+name: demo_1
+description: ''
+version: 0.0.1
+author: poojas@prophecy.io
+language: python
+buildSystem: wheel
+pipelines:
+  pipelines/demoPip:
+    name: demoPip
+    description: ''
+    author: poojas@prophecy.io
+    mode: batch
+    language: python
+    createdAt: '2023-03-20 09:56:01'
+    modifiedAt: '2023-03-20 10:28:05'
+    datasets:
+      inputs:
+      - datasets/customers
+      - datasets/orders
+      outputs:
+      - datasets/customer_orders
+    dependencies: {}
+  pipelines/demoPip2:
+    name: demoPip2
+    description: ''
+    author: poojas@prophecy.io
+    mode: batch
+    language: python
+    createdAt: '2023-03-20 10:27:26'
+    modifiedAt: '2023-03-20 10:27:53'
+    datasets:
+      inputs: []
+      outputs: []
+    dependencies: {}
+datasets:
+  datasets/customers:
+    name: customers
+    description: ''
+    author: poojas@prophecy.io
+    createdAt: '2023-03-20 10:02:58'
+    modifiedAt: '2023-03-20 10:02:59'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 647
+        datasetType: File
+        description: ''
+        author: poojas@prophecy.io
+        createdAt: '2023-03-20 10:02:59'
+        modifiedAt: '2023-03-20 10:02:59'
+  datasets/orders:
+    name: orders
+    description: ''
+    author: poojas@prophecy.io
+    createdAt: '2023-03-20 10:04:10'
+    modifiedAt: '2023-03-20 10:04:10'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 647
+        datasetType: File
+        description: ''
+        author: poojas@prophecy.io
+        createdAt: '2023-03-20 10:04:10'
+        modifiedAt: '2023-03-20 10:04:10'
+  datasets/customer_orders:
+    name: customer_orders
+    description: ''
+    author: poojas@prophecy.io
+    createdAt: '2023-03-20 10:14:08'
+    modifiedAt: '2023-03-20 10:23:24'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 647
+        datasetType: File
+        description: ''
+        author: poojas@prophecy.io
+        createdAt: '2023-03-20 10:14:08'
+        modifiedAt: '2023-03-20 10:14:08'
+templates: {}
+jobs:
+  jobs/demo_job:
+    name: demo_job
+    description: ''
+    fabricUID: 647
+    scheduler:
+      Databricks: {}
+    cloudProvider: null
+    jobSize: Small
+    scheduleCron: 0 0 0/1 * * ? *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines:
+    - pipelines/demoPip
+    - pipelines/demoPip2
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: false
+    createdAt: '2023-03-20 10:29:48'
+    modifiedAt: '2023-03-20 10:33:38'
+    author: poojas@prophecy.io
+libraries: []
+subgraphs:
+  subgraphs/join_subgraph:
+    name: join_subgraph
+    description: test description
+    author: poojas@prophecy.io
+    language: python
+    mode: batch
+    createdAt: '2023-03-20 10:27:09'
+    modifiedAt: '2023-03-20 10:27:09'
+sqlModels: {}
+sqlPipeline: null
+dependencies: []
+projectDependencies: {}
+pipelineConfigurations: {}
