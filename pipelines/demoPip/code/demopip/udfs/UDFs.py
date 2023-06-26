@@ -1,6 +1,7 @@
 from pyspark.sql import *
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
+from prophecy.transpiler import ABIUtil, BigDecimal, ScalaUtil, getContentAsStream, call_spark_fcn, substring_scala
 from prophecy.lookups import (
     createLookup,
     createRangeLookup,
@@ -16,7 +17,15 @@ n = 10
 
 def registerUDFs(spark: SparkSession):
     spark.udf.register("addten", addten)
+    ScalaUtil.initializeUDFs(spark)
 
-@udf(returnType = IntegerType())
-def addten(value: int):
-    return n + value
+def addtenGenerator():
+    n = 10
+
+    @udf(returnType = IntegerType())
+    def func(value: int):
+        return n + value
+
+    return func
+
+addten = addtenGenerator()

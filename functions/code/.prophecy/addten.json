@@ -1,0 +1,1 @@
+{"initCode":"n= 10","code":"@udf(returnType = IntegerType())\ndef addten(value: int):\n    return n+value"}
